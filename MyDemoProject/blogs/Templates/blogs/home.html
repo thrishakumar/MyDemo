@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<div class="container" style="background-color: aqua ; margin: 30px">
+    <h2>This is Home Page</h2>
+
+
+</div>
+
+{% for post in posts %}
+
+    <div style="border: 1px solid red;padding: 20px;margin-top: 10px">
+            <h2>Title : {{ post.title }}</h2>
+        <img src={{ post.img }} alt="">
+        <p> {{ post.description }}</p>
+            <span> Written by {{ post.author }}</span>
+            <p>No.of Like : {{ post.likes }}</p>
+    </div>
+
+
+{% endfor %}
+
+
+
+
+
+
+</body>
+</html>
+
+
+
