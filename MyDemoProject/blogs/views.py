@@ -5,6 +5,7 @@ from blogs.models import Post
 
 def home(request):
     post = Post.objects.all()
+
     data = {
         'posts': post
     }

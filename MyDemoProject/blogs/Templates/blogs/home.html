@@ -22,12 +22,12 @@
     <div class="jumbotron">
     <div  class="card mt-3" >
             <h2 class="card - head p-4 m-2">{{ post.title }}</h2>
-{#        {% if post.blog_image is not None %}#}
-{#        <img src="{{ post.blog_image.url }}" alt="">#}
-{#        {% endif %}#}
-        <p class="card - body m-2 p-3"> {{ post.description }}</p>
+
+        <img src="{{ post.blog_image.url }}" alt="NO Image Available">
+
+        <p class="card - body m-2 p-3"> {{ post.description  }}</p>
             <small class="card - footer p-2 mb-3 m-2" style="font-size:1rem"> By {{ post.author }}</small>
-             <small class="ml-2 mb-2"> posted on {{ post.date_posted }}</small>
+             <small class="ml-2 mb-2"> posted ago {{ post.date_posted | timesince }}</small>
     </div>
 
 </div>
